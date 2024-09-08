@@ -66,11 +66,16 @@ WSGI_APPLICATION = 'Vidzy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # or 'django.db.backends.sqlite3' for local development
+        'NAME': 'postgres',  # Update with your database name
+        'USER': 'postgres.vpthgofpmymqxvhlnfkv',  # Update with your database username
+        'PASSWORD': 'PearchTest@123',  # Update with your database password
+        'HOST': 'aws-0-us-east-1.pooler.supabase.com',  # or your database host
+        'PORT': '6543',  # Default PostgreSQL port
     }
 }
 
+# user=postgres.vpthgofpmymqxvhlnfkv password=[YOUR-PASSWORD] host=aws-0-us-east-1.pooler.supabase.com port=6543 dbname=postgres
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
